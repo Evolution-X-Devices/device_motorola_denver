@@ -55,6 +55,11 @@ PRODUCT_PACKAGES += \
 # LiveDisplay
 $(call soong_config_set_bool,livedisplay_sysfs,enable_ab,true)
 
+# Moto Camera 4
+TARGET_MOTCAMERA4 := denver
+
+$(call inherit-product, vendor/motorola/MotCamera4-sm6375/motcamera4.mk)
+
 # Power
 $(call soong_config_set,qtipower,tap_to_wake_node,/sys/class/touchscreen/primary/gesture)
 
